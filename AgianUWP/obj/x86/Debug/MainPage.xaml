@@ -1,0 +1,49 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="AgianUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AgianUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <ScrollViewer.Background>
+            <ImageBrush ImageSource="https://images8.alphacoders.com/824/thumb-1920-824638.png" Opacity="0.7"/>
+
+        </ScrollViewer.Background>
+        
+        <StackPanel Margin="40,50,40,20">           
+            <TextBox x:ConnectionId='2' x:Name="FirstName" Header="First Name"                                                       Margin="0,0,10,0" Grid.Row="0" Grid.Column="0" Width="300" HorizontalAlignment="Left" />
+            <TextBlock x:ConnectionId='3' x:Name="firstName" Visibility="Collapsed" Foreground="Red" Grid.Row="1" Grid.Column="0" Margin="5,0,0,0" />
+            <TextBox x:ConnectionId='4' x:Name="LastName" Header="LastName"                                                          Margin="0,0,0,0" Width="300" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+            <TextBlock x:ConnectionId='5' x:Name="lastName" Visibility="Collapsed" Foreground="Red" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
+            <TextBox x:ConnectionId='6' x:Name="Email" Header="Email"                                                  Width="300" HorizontalAlignment="Left" />
+            <TextBlock x:ConnectionId='7' x:Name="email" Visibility="Collapsed" Foreground="Red" Margin="0,15,0,0"/>
+            <PasswordBox x:ConnectionId='8' x:Name="PassWord"                                                         Header="Password"  Width="300" HorizontalAlignment="Left"  />
+            <TextBlock x:ConnectionId='9' x:Name="password" Visibility="Collapsed" Foreground="Red" Margin="5,0,0,0"/>
+            <TextBox x:ConnectionId='10' x:Name="AvatarUrl"                                                   Header="AvatarUrl" Width="300" HorizontalAlignment="Left"  />
+            <Image x:ConnectionId='11' x:Name="Avatar" Width="106" Height="123" HorizontalAlignment="Left" Margin="20,10,0,0" Source="https://png.pngtree.com/element_origin_min_pic/16/07/19/13578dbb4467f7c.jpg" VerticalAlignment="Stretch"/>
+            <Button x:ConnectionId='12' Content="Capture Your Photo" Margin="0,10,0,0"                      HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:ConnectionId='13' x:Name="Phone"                                                  Header="Phone Number" Width="300" HorizontalAlignment="Left" />
+            <TextBlock x:ConnectionId='14' x:Name="phone" Visibility="Collapsed" Foreground="Red" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
+            <TextBox x:ConnectionId='15' x:Name="Address"                                                    Header="Address" AcceptsReturn="True" Width="300" HorizontalAlignment="Left"  />
+            <TextBlock x:ConnectionId='16' x:Name="address" Visibility="Collapsed" Foreground="Red" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
+            <TextBox x:ConnectionId='17' x:Name="Introduction"                                                         Header="Introduction" AcceptsReturn="True" Height= "100" TextWrapping="Wrap" Width="300" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='18' x:Name="introduction" Visibility="Collapsed" Foreground="Red" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
+            <CalendarDatePicker x:ConnectionId='19' x:Name="BirthdayPicker"  Header="Birthday"                                           DateFormat = "{}{dayofweek.full}‎, ‎{month.full}‎ ‎{day.integer}‎, ‎{year.full}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <TextBlock Text="Gender"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:ConnectionId='22' Content="Male" Tag="1"                               IsChecked="True"/>
+                <RadioButton x:ConnectionId='23' Content="Female" Tag="0"                               />
+                <RadioButton x:ConnectionId='24' Content="Other" Tag="2"                                 />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='20' x:Name="doSubmit" Content="Submit"                       />
+                <Button x:ConnectionId='21' x:Name="doReset" Content="Reset"                       HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

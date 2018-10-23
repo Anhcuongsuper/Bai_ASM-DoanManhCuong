@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="AgianUWP.Views.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AgianUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="http://hinhanh.gamechocon.com/Thu_Vien_Anh/Anh_Lon/Animals_bgr.jpg" Stretch="UniformToFill" Opacity="0.7"/>
+        </StackPanel.Background>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="Email" Header="Email" Grid.Row="0" Grid.Column="0" Width="300" HorizontalAlignment="Left" Margin="20,0,0,0"  />
+            <TextBlock  x:Name="email" Visibility="Collapsed" Foreground="Red" HorizontalAlignment="Left" Margin="20,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="326"/>
+            <PasswordBox x:Name="Password" Header="Password" Grid.Row="1" Grid.Column="0" Width="300" Margin="20,20,0,0" HorizontalAlignment="Left"/>
+            <TextBlock  x:Name="password" Visibility="Collapsed" Foreground="Red"  HorizontalAlignment="Left" Margin="3,4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="286"/>
+            <CheckBox Content="Remember Me" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top"/>
+            <Button  Grid.Row="3" Grid.Column="0" Click="Login_Click" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="108" Height="44" Content="Login" Background="#05c16d">
+
+            </Button>
+        </Grid>
+
+    </StackPanel>
+
+</Page>

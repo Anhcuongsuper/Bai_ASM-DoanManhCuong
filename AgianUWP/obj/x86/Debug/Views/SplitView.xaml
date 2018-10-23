@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="AgianUWP.Views.SplitView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AgianUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="https://images-na.ssl-images-amazon.com/images/I/71xvIpiLbJL._SL1000_.jpg" Opacity="0.8"/>
+        </Grid.Background>
+        <SplitView x:ConnectionId='2' x:Name="SplitVia" DisplayMode="CompactInline" IsPaneOpen="True"  OpenPaneLength="210">
+            <SplitView.Pane >
+                <StackPanel Margin="6,50,83,20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <RadioButton x:ConnectionId='4' Margin="0,0,0,20" Style="{ThemeResource TextBlockButtonStyle}" Tag="MyAccount" HorizontalAlignment="Left"                           >
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="ContactInfo" Margin="0,0,15,0"/>
+                            <TextBlock Text="My Account"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton x:ConnectionId='5' Margin="0,0,0,20" Style="{ThemeResource TextBlockButtonStyle}" Tag="Register" HorizontalAlignment="Left"                          >
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="AddFriend" Margin="0,0,15,0"/>
+                            <TextBlock Text="Register"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton x:ConnectionId='6' Margin="0,0,0,20" Style="{ThemeResource TextBlockButtonStyle}" Tag="Log" HorizontalAlignment="Left"                          >
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Admin" Margin="0,0,15,0"/>
+                            <TextBlock Text="Login"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton x:ConnectionId='7' Margin="0,0,0,20" Style="{ThemeResource TextBlockButtonStyle}" Tag="Music" HorizontalAlignment="Left"                          >
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="MusicInfo" Margin="0,0,15,0"/>
+                            <TextBlock Text="Music"/>
+                        </StackPanel>
+                    </RadioButton>
+                </StackPanel>
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <Frame x:ConnectionId='8' x:Name="MyFrame" />
+            </SplitView.Content>
+        </SplitView>
+        <Button x:ConnectionId='3' VerticalAlignment="Top" HorizontalAlignment="Left" Width="48" Height="40"                     >
+            <StackPanel>
+                <SymbolIcon Symbol="List" Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" />
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Page>
+
